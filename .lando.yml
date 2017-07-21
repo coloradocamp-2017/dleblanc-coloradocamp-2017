@@ -1,0 +1,13 @@
+name: coloradocamp
+recipe: pantheon
+config:
+  framework: drupal8
+  env: dev
+  site: dleblanc-coloradocamp-2017
+  id: 06c5d5b7-05ad-405c-9bae-b7ca0824d863
+services:
+  appserver:
+    overrides:
+      services:
+        environment:
+          TERMINUS_CACHE_DIR: '/user/.terminus/cache'
