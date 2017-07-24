@@ -1,0 +1,25 @@
+default:
+  autoload:
+    '': %paths.base%/tests/features/bootstrap
+  suites:
+    default:
+      paths:
+        - %paths.base%/tests/features
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      base_url: http://nginx
+      selenium2:
+        capabilities:
+          version: ''
+      files_path: './data-files'
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drush'
+      drush:
+        root: 'web'
