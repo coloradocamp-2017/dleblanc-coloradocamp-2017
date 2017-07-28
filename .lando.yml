@@ -12,7 +12,6 @@ services:
       phpunit/phpunit: '*'
       behat/behat: '*'
     overrides:
-      xdebug: true
       services:
         environment:
           TERMINUS_CACHE_DIR: '/user/.terminus/cache'
